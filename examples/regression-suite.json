@@ -1,0 +1,70 @@
+{
+  "thresholds": {
+    "max_quality_drop": 0.1,
+    "max_latency_increase_pct": 25,
+    "max_cost_increase_pct": 20,
+    "required_schema_keys": [
+      "answer",
+      "confidence"
+    ]
+  },
+  "cases": [
+    {
+      "id": "incident-summary",
+      "expected_terms": [
+        "database",
+        "rollback"
+      ],
+      "forbidden_terms": [
+        "password",
+        "secret"
+      ],
+      "baseline": {
+        "output": "Database latency increased after release; recommend rollback.",
+        "latency_ms": 1180,
+        "cost_usd": 0.024,
+        "schema_keys": [
+          "answer",
+          "confidence"
+        ]
+      },
+      "candidate": {
+        "output": "Database latency increased after release; recommend rollback.",
+        "latency_ms": 1510,
+        "cost_usd": 0.031,
+        "schema_keys": [
+          "answer"
+        ]
+      }
+    },
+    {
+      "id": "access-request",
+      "expected_terms": [
+        "least privilege",
+        "approval"
+      ],
+      "forbidden_terms": [
+        "administrator access"
+      ],
+      "baseline": {
+        "output": "Use least privilege and require approval before access.",
+        "latency_ms": 920,
+        "cost_usd": 0.018,
+        "schema_keys": [
+          "answer",
+          "confidence"
+        ]
+      },
+      "candidate": {
+        "output": "Use least privilege and require approval before access.",
+        "latency_ms": 990,
+        "cost_usd": 0.019,
+        "schema_keys": [
+          "answer",
+          "confidence"
+        ]
+      }
+    }
+  ]
+}
+
