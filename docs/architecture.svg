@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="800" fill="#f8fafc"/>
+  <text x="90" y="105" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#0f172a">AI Workflow Regression Gate</text>
+  <text x="90" y="148" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#475569">Deterministic evidence before an AI workflow reaches production</text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="260" width="260" height="240" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="402" y="260" width="260" height="240" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="714" y="260" width="260" height="240" rx="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="1026" y="260" width="284" height="240" rx="22" fill="#ecfdf5" stroke="#34d399" stroke-width="2"/>
+  </g>
+
+  <circle cx="155" cy="325" r="29" fill="#dbeafe"/>
+  <text x="155" y="334" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#2563eb">1</text>
+  <text x="120" y="390" font-family="Arial" font-size="26" font-weight="700" fill="#0f172a">Workflow change</text>
+  <text x="120" y="429" font-family="Arial" font-size="18" fill="#475569">Baseline + candidate</text>
+  <text x="120" y="459" font-family="Arial" font-size="18" fill="#475569">Recorded test fixtures</text>
+
+  <circle cx="467" cy="325" r="29" fill="#ede9fe"/>
+  <text x="467" y="334" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#7c3aed">2</text>
+  <text x="432" y="390" font-family="Arial" font-size="26" font-weight="700" fill="#0f172a">Regression engine</text>
+  <text x="432" y="429" font-family="Arial" font-size="18" fill="#475569">Quality • schema</text>
+  <text x="432" y="459" font-family="Arial" font-size="18" fill="#475569">Latency • cost • safety</text>
+
+  <circle cx="779" cy="325" r="29" fill="#ffedd5"/>
+  <text x="779" y="334" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#ea580c">3</text>
+  <text x="744" y="390" font-family="Arial" font-size="26" font-weight="700" fill="#0f172a">Decision report</text>
+  <text x="744" y="429" font-family="Arial" font-size="18" fill="#475569">PASS • REVIEW • BLOCK</text>
+  <text x="744" y="459" font-family="Arial" font-size="18" fill="#475569">Explainable findings</text>
+
+  <circle cx="1091" cy="325" r="29" fill="#d1fae5"/>
+  <text x="1091" y="334" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#059669">4</text>
+  <text x="1056" y="390" font-family="Arial" font-size="26" font-weight="700" fill="#0f172a">Human approval</text>
+  <text x="1056" y="429" font-family="Arial" font-size="18" fill="#475569">Release only when safe</text>
+  <text x="1056" y="459" font-family="Arial" font-size="18" fill="#475569">No automatic deployment</text>
+
+  <line x1="350" y1="380" x2="392" y2="380" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="662" y1="380" x2="704" y2="380" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="974" y1="380" x2="1016" y2="380" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="90" y="580" width="1220" height="92" rx="18" fill="#0f172a"/>
+  <text x="700" y="619" text-anchor="middle" font-family="Arial" font-size="19" font-weight="700" fill="#6ee7b7">SAFETY BOUNDARY</text>
+  <text x="700" y="651" text-anchor="middle" font-family="Arial" font-size="19" fill="#e2e8f0">Offline fixtures • No LLM call • No workflow deployment • Auditable JSON output</text>
+</svg>
+
